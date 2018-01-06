@@ -9,7 +9,7 @@ import time
 import base64
 
 # nasne2syoboi.py
-# nasneの予約リストをsyoboiカレンダーに同期します
+# nasneの予約リストをしょぼいカレンダーに同期します
 
 # それぞれの環境に合わせて書き換えてください
 address_nasne='192.168.0.4' # nasneのアドレス
