@@ -9,13 +9,8 @@ import time
 import base64
 
 # nasne2syoboi.py
+# usage:python nasne2syoboi.py nasneurl userid password
 # nasneの予約リストをしょぼいカレンダーに同期します
-
-# それぞれの環境に合わせて書き換えてください
-address_nasne='192.168.0.4' # nasneのアドレス
-userid='yourid' # しょぼいカレンダーのユーザーID
-password='yourpassword' # しょぼいカレンダーのパスワード
-# ここまで
 
 def translateARIB(str):
 	#ARIB外字変換
@@ -74,6 +69,10 @@ def testShowItem(item):
 
 if __name__ == '__main__':
 	# Get from Nasne
+	address_nasne=sys.argv[1]
+	userid=sys.argv[2]
+	password=sys.argv[3]
+	print('%s,%s,%s' % (address_nasne,userid,password))
 	url_nasne='http://'+address_nasne+':64220/schedule/reservedListGet?'
 	params_nasne={
 				'searchCriteria' : 0,
